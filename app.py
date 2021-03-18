@@ -12,6 +12,13 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 
+DRIVER_LOCATION = "/usr/bin/chromedriver" 
+BINARY_LOCATION = "/usr/bin/google-chrome" 
+
+# start selenium
+options = webdriver.ChromeOptions() 
+options.binary_location = BINARY_LOCATION 
+
 # op.add_argument("--headless")
 # op.add_argument("--no-sandbox")
 # op.add_argument("--disable-dev-shm-usage")
@@ -19,7 +26,8 @@ from webdriver_manager.firefox import GeckoDriverManager
 
 # def main():
     # driver = webdriver.Firefox(executable_path=GeckoDriverManager().install()) #For Firefox
-driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())  #For Chrome
+# driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())  #For Chrome
+driver = webdriver.Chrome(executable_path=DRIVER_LOCATION, options=options) 
 
 wait = WebDriverWait(driver, 10)
 def checkout():
