@@ -2,6 +2,7 @@ import os
 import schedule
 import time
 import ctypes
+import creds
 from selenium import webdriver
 from playsound import playsound
 from selenium.webdriver.support import expected_conditions as EC
