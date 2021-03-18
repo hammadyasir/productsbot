@@ -11,11 +11,11 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 
-op = webdriver.ChromeOptions()
-op.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-op.add_argument("--headless")
-op.add_argument("--no-sandbox")
-op.add_argument("--disable-dev-shm-usage")
+# op = webdriver.ChromeOptions()
+# op.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+# op.add_argument("--headless")
+# op.add_argument("--no-sandbox")
+# op.add_argument("--disable-dev-shm-usage")
 # driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=op)
 
 def main():
@@ -84,7 +84,7 @@ def main():
 
 
 if __name__ == "__main__":
-    schedule.every(2).minutes.do(main)
+    schedule.every(4).minutes.do(main)
     while True:
         schedule.run_pending()
         time.sleep(1)
