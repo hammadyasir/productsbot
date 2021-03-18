@@ -1,9 +1,9 @@
+#!/usr/bin/python3
 import os
 import schedule
 import time
 import ctypes
 import creds
-#!/usr/bin/python3
 from selenium import webdriver
 from playsound import playsound
 from selenium.webdriver.support import expected_conditions as EC
