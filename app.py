@@ -10,6 +10,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
+DRIVER_LOCATION = "/usr/bin/chromedriver" 
+BINARY_LOCATION = "/usr/bin/google-chrome" 
 
 # op = webdriver.ChromeOptions()
 # op.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
