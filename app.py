@@ -14,8 +14,8 @@ from webdriver_manager.firefox import GeckoDriverManager
 DRIVER_LOCATION = "/usr/bin/chromedriver" 
 BINARY_LOCATION = "/usr/bin/google-chrome" 
 
-# op = webdriver.ChromeOptions()
-# op.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+options = webdriver.ChromeOptions() 
+options.binary_location = BINARY_LOCATION ("GOOGLE_CHROME_BIN")
 # op.add_argument("--headless")
 # op.add_argument("--no-sandbox")
 # op.add_argument("--disable-dev-shm-usage")
@@ -24,6 +24,7 @@ BINARY_LOCATION = "/usr/bin/google-chrome"
 # def main():
     # driver = webdriver.Firefox(executable_path=GeckoDriverManager().install()) #For Firefox
 driver = webdriver.Chrome(ChromeDriverManager().install())  #For Chrome
+driver = webdriver.Chrome(executable_path=DRIVER_LOCATION, options=options) 
 wait = WebDriverWait(driver, 10)
 def checkout():
     driver.find_element(By.CSS_SELECTOR, '#cartItemCount').click() # Gotocart
