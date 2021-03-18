@@ -26,7 +26,7 @@ options.binary_location = BINARY_LOCATION
 
 # def main():
     # driver = webdriver.Firefox(executable_path=GeckoDriverManager().install()) #For Firefox
-driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())  #For Chrome
+driver = webdriver.Chrome(ChromeDriverManager().install())  #For Chrome
 # driver = webdriver.Chrome(executable_path=DRIVER_LOCATION, options=options) 
 
 wait = WebDriverWait(driver, 10)
